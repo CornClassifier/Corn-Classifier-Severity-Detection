@@ -53,16 +53,6 @@ body {
     cursor: pointer;
 }
 
-.active {
-    background-color: black;
-    cursor: pointer;
-}
-
-.active h3 {
-    color: white;
-    font-family: UbuntuReg;
-}
-
 .classify h3 {
     color: black;
     font-family: UbuntuReg;
@@ -173,6 +163,99 @@ form label {
       color: white;
       background-color: black;
       
+  }
+
+  @media screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 1em;
+    }
+
+    .nav {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 3px;
+        text-align: center;
+    
+    }
+
+    .container {
+        padding: 0
+    }
+    
+    .data-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+    
+    }
+
+    .image-container { 
+        text-align: center;
+    
+    
+    }
+    
+    .image {
+        border: 2px dashed black;
+    
+    }
+    
+    .image img{
+        width: 70%;
+        margin: 0 10px;
+    }
+    
+    .results-container {
+       box-shadow: none;
+       text-align: center;
+       margin-left: 25%;
+       margin-right: 25%;
+    }
+    
+    .results-container h3 {
+        font-family: UbuntuReg;
+        margin-left: 2%;
+    }
+    
+    .results-container h1 {
+        font-family: IBMBold;
+        text-align: center;
+        margin-top: 15%;
+        margin-bottom: 15%;
+        font-size: 2em;
+    }
+    
+    .results-container h5 {
+        font-family: IBMReg;
+        font-size: 0.5em;
+        margin: 1px 5%;
+        padding: 1% 1%
+    }
+    
+    .results-container h4 {
+        font-family: IBMBold;
+        font-size: 1em;
+        margin: 5px 5%;
+    }
+
+    form label {
+        color: black;
+        font-weight: bold;
+        font-family: UbuntuReg;
+        cursor: pointer;
+        margin-top: 5rem;
+        height: 10vh;
+        max-width: 99%;
+        display: inline-block;
+        text-align: center;
+        background-color: white;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        display: grid;
+      }
+
   }
 
 
