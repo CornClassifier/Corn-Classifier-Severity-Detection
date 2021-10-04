@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: RobotoReg;
+    src: url('../fonts/RobotoMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: UbuntuReg;
+    src: url('../fonts/UbuntuMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: IBMReg;
+    src: url('../fonts/IBMPlexMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: IBMBold;
+    src: url('../fonts/IBMPlexMono-Bold.ttf');
+}
+
+.header {
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    text-align: center;
+    font-family: RobotoReg;
+}
+
+.nav {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 3px;
+    text-align: center;
+
+}
+
+.classify {
+    background-color: white;
+    cursor: pointer;
+}
+
+.active {
+    background-color: black;
+    cursor: pointer;
+}
+
+.active h3 {
+    color: white;
+    font-family: UbuntuReg;
+}
+
+.classify h3 {
+    color: black;
+    font-family: UbuntuReg;
+}
+
+.severity {
+    background-color: white;
+    cursor: pointer;
+}
+
+.severity h3 {
+    color: black;
+    font-family: UbuntuReg;
+}
+
+.active {
+    background-color: black;
+    cursor: pointer;
+}
+
+.active h3 {
+    color: white;
+    font-family: UbuntuReg;
+}
+
+.container {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding-left: 5%;
+
+}
+
+.data-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40vw 50vw;
+    gap: 10px;
+
+}
+
+.image-container { 
+    text-align: center;
+
+
+}
+
+.image {
+    border: 2px dashed black;
+
+}
+
+.image img{
+    width: 70%;
+}
+
+.results-container {
+   max-width: 50vw;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.results-container h3 {
+    font-family: UbuntuReg;
+    margin-left: 2%;
+}
+
+.results-container h1 {
+    font-family: IBMBold;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    font-size: 3em;
+}
+
+.results-container h5 {
+    font-family: IBMReg;
+    font-size: 1em;
+    margin: 1px 5%;
+}
+
+.results-container h4 {
+    font-family: IBMBold;
+    font-size: 2em;
+    margin: 5px 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+form label {
+    color: black;
+    font-weight: bold;
+    font-family: UbuntuReg;
+    cursor: pointer;
+    margin-top: 5rem;
+    height: 10vh;
+    max-width: 96%;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    display: grid;
+  }
+
+  form label:hover {
+      color: white;
+      background-color: black;
+      
+  }
+
+
+
+
+
+

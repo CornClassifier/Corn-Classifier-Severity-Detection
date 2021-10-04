@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <script type="text/javascript" src="../static/js/index.js"></script>
+    <title>Corn Leaf Disease Classifier and Severity Detection System</title>
+</head>
+<body onload="determineTab('{{tab}}')">
+    <div class="header">
+        <h1>Corn Leaf Diseases Identification and Severity Detection System</h1>
+    </div>
+    <div class="nav">
+        <div class="classify active" id="classify" onclick="classify()">
+            <h3>Classification</h3>
+        </div>
+        <div class="severity" id="severity" onclick="severity()">
+            <h3>Severity Detection</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="data-container">
+            <div class="image-container" id="img-classify">
+                <div class="image">
+                    <img src="{{ data[0] }}" alt="default-img">
+                </div>
+            </div>
+            <div class="image-container hidden" id="img-severe">
+                <div class="image">
+                    <img src="{{ severe[0] }}" alt="default-img">
+                </div>
+            </div>
+            <div class="results-container" id="classify-result">
+                <h3>Result:</h3>
+                <h1>{{data[1]}}</h1>
+            </div>
+            <div class="results-container hidden" id="severity-result">
+                <h3>Result:</h3>
+                <h5>Infected Part:</h5>
+                <h4>{{severe[1]}}</h4>
+                <h5>Severity Rating:</h5>
+                <h4>{{severe[2]}}</h4>
+                <br>
+                <h4>{{severe[3]}}</h4>
+            </div>
+        </div>
+        <div class="form-container" id="upload-classify">
+            <form action="classify" method="post" id="form" enctype="multipart/form-data">
+                <input type="file" name="imgFile" accept="image/*" onchange="form.submit()" id="imgFile" hidden>
+                <label for="imgFile"><p>UPLOAD</p></label>
+            </form>
+        </div>
+        <div class="form-container hidden" id="upload-severity">
+            <form action="severity" method="post" id="form" enctype="multipart/form-data">
+                <input type="file" name="severityFile" accept="image/*" onchange="form.submit()" id="severityFile" hidden>
+                <label for="severityFile"><p>UPLOAD</p></label>
+            </form>
+    </div>
+
+</body>
+
+</html>
