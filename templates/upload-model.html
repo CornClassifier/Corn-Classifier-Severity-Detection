@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload updated model</title>
+</head>
+<body>
+    <div class="success message" style="background-color: aquamarine; border-radius: 5px; padding: 50px, 40px; width: 50vh;">
+        <p>{{message}}</p>
+    </div>
+    <form action="saved-model" method="post" id="form" enctype="multipart/form-data">
+        <input type="file" accept=".h5" name="model_updated" id="model_updated">
+        <input type="submit" value="Upload Model">
+    </form>
+</body>
+</html>

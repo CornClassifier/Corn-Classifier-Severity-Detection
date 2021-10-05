@@ -246,7 +246,7 @@ form label {
         cursor: pointer;
         margin-top: 5rem;
         height: 10vh;
-        max-width: 99%;
+        max-width: 100%;
         display: inline-block;
         text-align: center;
         background-color: white;

@@ -98,6 +98,21 @@ def severity():
 
     return render_template('index.html', severe=severityReturn, data=toReturn, tab="severe")
 
+@app.route('/update-model', methods=['GET'])
+def updateModel():
+    return render_template('upload-model.html', message='')
+
+@app.route('/saved-model', methods=['POST'])
+def savedModel():
+    newModelFile = request.files['model_updated']
+    print(newModelFile.filename)
+    newModelFile.filename = 'classifier-model.h5'
+    print(newModelFile.filename)
+    model_path = './model/' + newModelFile.filename
+    newModelFile.save(model_path)
+
+    return render_template('upload-model.html', message='Model is successfully uploaded')
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
