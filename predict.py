@@ -22,7 +22,7 @@ def predict(model, img):
     np_image = np.expand_dims(np_image, axis=0)
 
     CATEGORIES = ["Brown Spot", "Common Rust",
-                  "Healthy", "Northern Leaf Blight"]
+                  "Healthy", "Northern Leaf Blight", "Not Detected"]
                   
     prediction = model.predict(np_image)
     prediction = np.argmax(prediction, axis=1)
